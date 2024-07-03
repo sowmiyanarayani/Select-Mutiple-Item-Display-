@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { rndString } from '@laufire/utils/random';
 const CustomerManager = {
 	addItems: (context) => {
@@ -5,15 +6,16 @@ const CustomerManager = {
 			state: { items, itemDetails },
 			config: { idLength, products },
 		} = context;
-		const getPrice = (itemName) =>
-			products.find((item) => item.name === itemName)?.price || null;
+		const calculateTotalPrice = () => items.reduce((total, itemName) =>
+			total + (products.find((product) => product.name === itemName)
+				?.price || 0), 0);
 
 		return [
 			...itemDetails,
 			{
 				id: rndString(idLength),
 				items: items,
-				price: getPrice(items),
+				price: calculateTotalPrice(items),
 			},
 		];
 	},
