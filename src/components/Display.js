@@ -1,7 +1,7 @@
 import { React } from 'react';
+import AddItem from './AddItem';
 import Button from './Button';
 import TableForm from './TableForm';
-import AddItem from './AddItem';
 const Display = (context) => <div className="box">
 	<h1>Super Market</h1>
 	<AddItem { ...context }/>
