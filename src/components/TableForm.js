@@ -18,6 +18,7 @@ const CustomerList = (context) => {
 						key={ customer.id }
 						items={ customer.items }
 						price={ customer.price }
+
 					/>) }
 			</tbody>
 		</table>
