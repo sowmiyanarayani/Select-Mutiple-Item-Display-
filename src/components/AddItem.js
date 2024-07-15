@@ -21,7 +21,6 @@ const AddItem = (context) => {
 					<option key={ index } value={ product.name }>
 						{ product.name }  </option>) }
 			</select>
-
 		</div>
 	);
 };
