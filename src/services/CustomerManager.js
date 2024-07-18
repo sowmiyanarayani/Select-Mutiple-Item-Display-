@@ -6,16 +6,21 @@ const CustomerManager = {
 			state: { items, itemDetails },
 			config: { idLength, products },
 		} = context;
-		const calculateTotalPrice = () => items.reduce((total, itemName) =>
-			total + (products.find((product) => product.name === itemName)
-				?.price || 0), 0);
+
+		const findItemPrices = (selectedItems) =>
+			selectedItems.map((itemName) => (products.find((productName) =>
+				productName.name === itemName) || { price: 0 }).price);
+
+		const prices = findItemPrices(items);
+		const totalPrice = prices.reduce((acc, price) => acc + price, 0);
 
 		return [
 			...itemDetails,
 			{
 				id: rndString(idLength),
 				items: items,
-				price: calculateTotalPrice(items),
+				price: findItemPrices(items),
+				totalPrice: totalPrice,
 			},
 		];
 	},

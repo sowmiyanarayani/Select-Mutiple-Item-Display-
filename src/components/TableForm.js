@@ -5,11 +5,12 @@ const CustomerList = (context) => {
 	const { state: { itemDetails }} = context;
 
 	return (
-		<table className="gird">
+		<table border="1px" className="gird">
 			<thead>
 				<tr>
 					<th>item</th>
 					<th>price</th>
+					<th>totalPrice</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -18,7 +19,7 @@ const CustomerList = (context) => {
 						key={ customer.id }
 						items={ customer.items }
 						price={ customer.price }
-
+						totalPrice={ customer.totalPrice }
 					/>) }
 			</tbody>
 		</table>
