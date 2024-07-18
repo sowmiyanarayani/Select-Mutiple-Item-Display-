@@ -1,11 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable max-lines-per-function */
 import Customer from './Customer';
-const CustomerList = (context) => {
+const TableForm = (context) => {
 	const { state: { itemDetails }} = context;
 
 	return (
-		<table border="1px" className="gird">
+		<table border="5px">
 			<thead>
 				<tr>
 					<th>item</th>
@@ -26,4 +26,4 @@ const CustomerList = (context) => {
 	);
 };
 
-export default CustomerList;
+export default TableForm;

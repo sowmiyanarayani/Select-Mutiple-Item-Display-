@@ -15,5 +15,13 @@ select{
 th,tr{
 	font-size: 20px;
 	align-items: center;
+	background-color: rgb(121, 175, 116);
+}
+table{color:navy;}
+.grid {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	background-color: #727564;
+	padding: 10px;
 }
 }
