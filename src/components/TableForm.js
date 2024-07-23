@@ -8,9 +8,10 @@ const TableForm = (context) => {
 		<table border="5px">
 			<thead>
 				<tr>
-					<th>item</th>
-					<th>price</th>
-					<th>totalPrice</th>
+					<th>Item</th>
+					<th>Price</th>
+					<th>Total</th>
+					<th>Discount Amount</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -20,6 +21,7 @@ const TableForm = (context) => {
 						items={ customer.items }
 						price={ customer.price }
 						totalPrice={ customer.totalPrice }
+						totalDiscountedPrice={ customer.totalDiscountedPrice }
 					/>) }
 			</tbody>
 		</table>

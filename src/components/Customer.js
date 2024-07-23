@@ -1,13 +1,22 @@
-import { React } from 'react';
-const Customer = ({ id, items, price, totalPrice, index }) =>
+import React from 'react';
+
+const Customer = ({ id, items, price, totalPrice, totalDiscountedPrice }) =>
 	<tr key={ id }>
 		<td>
-			{ items.map((item) => <tr key={ index }>{ item }</tr>) }
+			{ items.map((item, index) =>
+				<tr key={ index }>
+					<td>{ item }</td>
+				</tr>) }
 		</td>
 		<td>
-			{ price.map((prices) => <tr key={ index }>{ prices }</tr>) }
+			{ price.map((prices, index) =>
+				<tr key={ index }>
+					<td>{ prices }</td>
+				</tr>) }
 		</td>
 		<td>{ totalPrice }</td>
-	</tr>;
+		<td>{ totalDiscountedPrice }</td>
+	</tr>
+;
 
 export default Customer;

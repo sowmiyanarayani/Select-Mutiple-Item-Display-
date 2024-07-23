@@ -12,6 +12,12 @@ const config = {
 		{ name: 'Face Wash', price: 70 },
 		{ name: 'Soap', price: 45 },
 	],
+	discounts: [
+		{ price: 200, discount: 0.3 },
+		{ price: 100, discount: 0.2 },
+		{ price: 50, discount: 0.1 },
+		{ price: 10, discount: 0.01 },
+	],
 };
 
 export default config;
